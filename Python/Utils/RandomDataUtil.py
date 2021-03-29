@@ -1,4 +1,6 @@
 from random import *
+from datetime import date, timedelta
+import calendar
 import string
 
 def randomKoreanFirstName(size : int):
@@ -41,9 +43,16 @@ def randomNumric(size : int):
 def randomCarNo():
     return randomFromUnicode(2) + randomNumric(2) + randomFromUnicode(1) + randomNumric(4)
 
+def randomBirthday(start_year=1901, end_year=2021):
+    rand_year = randint(start_year, end_year)
+    rand_month = randint(1, 12)
+    rand_date = randint(1, calendar.monthrange(rand_year, rand_month)[1])
+    return str(rand_year).ljust(4, "0") + str(rand_month).rjust(2, "0") + str(rand_date).rjust(2, "0")
+
 if __name__ == "__main__":
     print(randomFromUnicode(3))
     print(randomKoreanLastName(2) + randomKoreanFirstName(2))
     print(randomCi())
     print(randomCarNo())
     print(randomKoreanFullName())
+    print(randomBirthday())

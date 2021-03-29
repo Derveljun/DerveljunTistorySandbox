@@ -1,5 +1,3 @@
-package test1;
-
 import java.util.Random;
 
 public class RandomDataUtil {
@@ -58,14 +56,64 @@ public class RandomDataUtil {
 		return randomChoice(ALL_KOREAN_LAST_NAME, size);
 	}
 	
+	
 	/**
-	 * 랜덤한 숫자 가져오기
+	 * 국내 랜덤한 성과이름 가져오기
 	 * @param size
 	 * @return
 	 * @throws Exception
 	 */
-	public static String randomNumber(int size) throws Exception {
+	public static String randomKoreanFullName() throws Exception { 
+		return randomKoreanLastName(random.nextInt(2)) + randomKoreanFirstName(random.nextInt(4));
+	}
+	
+	/**
+	 * 국내 랜덤한 성과이름 가져오기
+	 * @param size
+	 * @return
+	 * @throws Exception
+	 */
+	public static String randomKoreanFullName(int lastNameSize, int firstNameSize) throws Exception { 
+		return randomKoreanLastName(random.nextInt(lastNameSize)) + randomKoreanFirstName(firstNameSize);
+	}
+	
+	/**
+	 * 랜덤한 숫자열 가져오기
+	 * @param size
+	 * @return
+	 * @throws Exception
+	 */
+	public static String randomNumric(int size) throws Exception {
 		return randomChoice(NUMRIC, size);
+	}
+	
+	/**
+	 * 랜덤한 숫자 가져오기
+	 * @return
+	 * @throws Exception
+	 */
+	public static int randomNumber() throws Exception {
+		return random.nextInt();
+	}
+	
+	/**
+	 * 범위 내 랜덤한 숫자 가져오기
+	 * @param bound
+	 * @return
+	 * @throws Exception
+	 */
+	public static int randomNumber(int bound) throws Exception {
+		return random.nextInt(bound);
+	}
+	
+	/**
+	 * 랜덤한 String형 숫자 가져오기
+	 * @param bound
+	 * @return
+	 * @throws Exception
+	 */
+	public static String randomStringNumber(int bound) throws Exception {
+		return String.valueOf(random.nextInt(bound));
 	}
 	
 	/**
@@ -140,6 +188,15 @@ public class RandomDataUtil {
 	}
 	
 	/**
+	 * 랜덤한 차량번호 가져오기
+	 * @return
+	 * @throws Exception
+	 */
+	public static String randomCarNo() throws Exception {
+		return randomKoreanUnicode(2) + randomNumric(2) + randomKoreanUnicode(2) + randomNumric(4);
+	}
+	
+	/**
 	 * 가용 인덱스 내에서 랜덤한 값 가져오기
 	 * @param size
 	 * @return
@@ -165,7 +222,7 @@ public class RandomDataUtil {
 	public static void main(String[] args) throws Exception {
 		System.out.println(randomKoreanFirstName(2));
 		System.out.println(randomKoreanLastName(2));
-		System.out.println(randomNumber(10));
+		System.out.println(randomNumric(10));
 		System.out.println(randomKoreanUnicode(4));
 		System.out.println(randomCellPhone());
 		System.out.println(randomCi());

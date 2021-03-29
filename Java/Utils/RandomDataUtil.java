@@ -1,14 +1,16 @@
+package test1;
+
 import java.util.Random;
 
 public class RandomDataUtil {
 	
 	private final static Random random = new Random();
 	
-	public final static String ALL_KOREAN_LAST_NAME = "±èÀÌ¹ÚÃÖÁ¤°­Á¶À±ÀåÀÓÇÑ¿À¼­½Å±ÇÈ²¾È¼Û·ùÀüÈ«°í¹®¾ç¼Õ¹è¹éÇãÀ¯³²½ÉÁö³ëÇÏ°û¼ºÂ÷ÁÖ¿ì±¸¶ó¹ÎÁø¾öÃ¤¿øÃµ¹æ°øÇöÇÔº¯¿°¿©Ãßµµ¼Ò¼®¼±¼³¸¶±æ¿¬À§Ç¥¸í±â¹Ý¿Õ±Ý¿ÁÀ°ÀÎ¸ÍÁ¦¸ðÅ¹±¹¾îÀºÆí¿ë¿¹°æºÀ»çºÎ°¡º¹ÅÂ¸ñÇü°èÇÇµÎ°¨À½ºóµ¿¿ÂÈ£¹üÁÂÆØ½Â°£»ó½Ã°¥´Ü°ß´çÈ­Ã¢";
-	public final static String ALL_KOREAN_NAMABLE_KOR = "°¡°¢°£°¥°¨°©°­°³°´°»°½°Å°Ç°É°Ë°Ì°Ô°Ý°ß°á°â°æ°è°í°î°ï°ñ°ø°ù°ú°û°ü°ý±¤±¥±«±¬±²±³±¸±¹±º±¼±Ã±Ç±È±Ë±Í±Ô±Õ±Ö±Ø±Ù±Û±Ý±Þ±à±â±ä±æ±è³£³ª³«³­³¯³²³³³¶³»³à³á³â³ä³å³ç³ë³ó³ú´¢´©´«´­´º´»´É´Ï´Ð´Ò´Ù´Ü´Þ´ã´ä´ç´ë´ì´öµµµ¶µ·µ¹µ¿µÎµÐµÑµæµî¶ó¶ô¶õ¶ö¶÷¶ø¶û·¡·©"
-            +"·«·®·Á·Â·Ã·Ä·Å·Æ·É·Ê·Î·Ï·Ð·Õ·Ú·á·æ·ç·ù·ú·û·ü¸¢¸¤¸§¸ª¸®¸°¸²¸³¸¶¸·¸¸¸»¸Á¸Å¸Æ¸Í¸è¸é¸ê¸í¸ï¸ð¸ñ¸ô¸ù¹¦¹«¹¬¹®¹°¹Ì¹Î¹Ð¹Ú¹Ý¹ß¹æ¹è¹é¹ø¹ú¹ü¹ýº®º¯º°º´º¸º¹º»º¼ºÀºÎºÏºÐºÒºØºñºóºù»ç»è»ê»ì»ï»ð»ó»õ»ö»ý¼­¼®¼±¼³¼¶¼·¼º¼¼¼Ò¼Ó¼Õ¼Ö¼Û¼â¼è¼ö¼÷¼ø¼ú¼þ½¬½½½À½Â½Ã"
-            +"½Ä½Å½Ç½É½Ê½Ö¾¾¾Æ¾Ç¾È¾Ë¾Ï¾Ð¾Ó¾Ö¾×¾Þ¾ß¾à¾ç¾î¾ï¾ð¾ó¾ö¾÷¿¡¿£¿©¿ª¿¬¿­¿°¿±¿µ¿¹¿À¿Á¿Â¿Ã¿Ë¿Í¿Ï¿Ð¿Õ¿Ö¿Ü¿ä¿å¿ë¿ì¿í¿î¿ï¿õ¿ø¿ùÀ§À¯À°À±À²À¶ÀºÀ»À½À¾ÀÀÀÇÀÌÀÍÀÎÀÏÀÓÀÔÀ×ÀÚÀÛÀÜÀáÀâÀåÀçÀïÀúÀûÀüÀýÁ¡Á¢Á¤Á¦Á¶Á·Á¸Á¹Á¾ÁÂÁËÁÖÁ×ÁØÁÙÁßÁïÁñÁóÁõÁöÁ÷ÁøÁúÁüÁýÂ¡Â÷Âø"
-            +"ÂùÂûÂüÃ¢Ã¤Ã¥Ã³Ã´ÃµÃ¶Ã·Ã¸Ã»Ã¼ÃÊÃËÃÌÃÑÃÔÃÖÃßÃàÃáÃâÃæÃéÃëÃøÃþÄ¡Ä¢Ä£Ä¥Ä§Ä¨ÄªÄèÅ¸Å¹ÅºÅ»Å½Å¾ÅÁÅÂÅÃÅÊÅÍÅäÅæÅëÅðÅõÅüÆ¯Æ´ÆÄÆÇÆÈÆÐÆØÆÚÆíÆïÆòÆóÆ÷ÆøÇ¥Ç°Ç³ÇÇÇÈÇÊÇÌÇÏÇÐÇÑÇÒÇÔÇÕÇ×ÇØÇÙÇàÇâÇãÇåÇæÇèÇõÇöÇ÷ÇøÇùÇüÇýÈ£È¤È¥È¦È«È­È®È¯È°È²È¸È¹È¾È¿ÈÄÈÆÈÇÈËÈÍÈÑÈÖÈÞÈáÈäÈæÈçÈêÈìÈíÈïÈñÈ÷Èú";
+	public final static String ALL_KOREAN_LAST_NAME = "ê¹€ì´ë°•ìµœì •ê°•ì¡°ìœ¤ìž¥ìž„í•œì˜¤ì„œì‹ ê¶Œí™©ì•ˆì†¡ë¥˜ì „í™ê³ ë¬¸ì–‘ì†ë°°ë°±í—ˆìœ ë‚¨ì‹¬ì§€ë…¸í•˜ê³½ì„±ì°¨ì£¼ìš°êµ¬ë¼ë¯¼ì§„ì—„ì±„ì›ì²œë°©ê³µí˜„í•¨ë³€ì—¼ì—¬ì¶”ë„ì†Œì„ì„ ì„¤ë§ˆê¸¸ì—°ìœ„í‘œëª…ê¸°ë°˜ì™•ê¸ˆì˜¥ìœ¡ì¸ë§¹ì œëª¨íƒêµ­ì–´ì€íŽ¸ìš©ì˜ˆê²½ë´‰ì‚¬ë¶€ê°€ë³µíƒœëª©í˜•ê³„í”¼ë‘ê°ìŒë¹ˆë™ì˜¨í˜¸ë²”ì¢ŒíŒ½ìŠ¹ê°„ìƒì‹œê°ˆë‹¨ê²¬ë‹¹í™”ì°½";
+	public final static String ALL_KOREAN_NAMABLE_KOR = "ê°€ê°ê°„ê°ˆê°ê°‘ê°•ê°œê°ê°±ê°¹ê±°ê±´ê±¸ê²€ê²ê²Œê²©ê²¬ê²°ê²¸ê²½ê³„ê³ ê³¡ê³¤ê³¨ê³µê³¶ê³¼ê³½ê´€ê´„ê´‘ê´˜ê´´ê´µêµ‰êµêµ¬êµ­êµ°êµ´ê¶ê¶Œê¶ê¶¤ê·€ê·œê· ê·¤ê·¹ê·¼ê¸€ê¸ˆê¸‰ê¸ê¸°ê¸´ê¸¸ê¹€ë½ë‚˜ë‚™ë‚œë‚ ë‚¨ë‚©ë‚­ë‚´ë…€ë…ë…„ë…ë…‘ë…•ë…¸ë†ë‡Œë‡¨ëˆ„ëˆˆëˆŒë‰´ë‰µëŠ¥ë‹ˆë‹‰ë‹ë‹¤ë‹¨ë‹¬ë‹´ë‹µë‹¹ëŒ€ëŒë•ë„ë…ëˆëŒë™ë‘ë‘”ë‘˜ë“ë“±ë¼ë½ëž€ëž„ëžŒëžëž‘ëž˜ëž­"
+            +"ëžµëŸ‰ë ¤ë ¥ë ¨ë ¬ë ´ë µë ¹ë¡€ë¡œë¡ë¡ ë¡±ë¢°ë£Œë£¡ë£¨ë¥˜ë¥™ë¥œë¥ ë¥­ë¥µë¦„ë¦‰ë¦¬ë¦°ë¦¼ë¦½ë§ˆë§‰ë§Œë§ë§ë§¤ë§¥ë§¹ë©±ë©´ë©¸ëª…ëªŒëª¨ëª©ëª°ëª½ë¬˜ë¬´ë¬µë¬¸ë¬¼ë¯¸ë¯¼ë°€ë°•ë°˜ë°œë°©ë°°ë°±ë²ˆë²Œë²”ë²•ë²½ë³€ë³„ë³‘ë³´ë³µë³¸ë³¼ë´‰ë¶€ë¶ë¶„ë¶ˆë¶•ë¹„ë¹ˆë¹™ì‚¬ì‚­ì‚°ì‚´ì‚¼ì‚½ìƒìƒˆìƒ‰ìƒì„œì„ì„ ì„¤ì„¬ì„­ì„±ì„¸ì†Œì†ì†ì†”ì†¡ì‡„ì‡ ìˆ˜ìˆ™ìˆœìˆ ìˆ­ì‰¬ìŠ¬ìŠµìŠ¹ì‹œ"
+            +"ì‹ì‹ ì‹¤ì‹¬ì‹­ìŒì”¨ì•„ì•…ì•ˆì•Œì•”ì••ì•™ì• ì•¡ì•µì•¼ì•½ì–‘ì–´ì–µì–¸ì–¼ì—„ì—…ì—ì—”ì—¬ì—­ì—°ì—´ì—¼ì—½ì˜ì˜ˆì˜¤ì˜¥ì˜¨ì˜¬ì˜¹ì™€ì™„ì™ˆì™•ì™œì™¸ìš”ìš•ìš©ìš°ìš±ìš´ìš¸ì›…ì›ì›”ìœ„ìœ ìœ¡ìœ¤ìœ¨ìœµì€ì„ìŒìì‘ì˜ì´ìµì¸ì¼ìž„ìž…ìž‰ìžìž‘ìž”ìž ìž¡ìž¥ìž¬ìŸì €ì ì „ì ˆì ì ‘ì •ì œì¡°ì¡±ì¡´ì¡¸ì¢…ì¢Œì£„ì£¼ì£½ì¤€ì¤„ì¤‘ì¦‰ì¦ì¦™ì¦ì§€ì§ì§„ì§ˆì§ì§‘ì§•ì°¨ì°©"
+            +"ì°¬ì°°ì°¸ì°½ì±„ì±…ì²˜ì²™ì²œì² ì²¨ì²©ì²­ì²´ì´ˆì´‰ì´Œì´ì´¬ìµœì¶”ì¶•ì¶˜ì¶œì¶©ì·Œì·¨ì¸¡ì¸µì¹˜ì¹™ì¹œì¹ ì¹¨ì¹©ì¹­ì¾Œíƒ€íƒíƒ„íƒˆíƒíƒ‘íƒ•íƒœíƒíƒ±í„°í† í†¤í†µí‡´íˆ¬í‰íŠ¹í‹ˆíŒŒíŒíŒ”íŒ¨íŒ½í…íŽ¸í„í‰íí¬í­í‘œí’ˆí’í”¼í”½í•„í•í•˜í•™í•œí• í•¨í•©í•­í•´í•µí–‰í–¥í—ˆí—Œí—í—˜í˜í˜„í˜ˆí˜í˜‘í˜•í˜œí˜¸í˜¹í˜¼í™€í™í™”í™•í™˜í™œí™©íšŒíšíš¡íš¨í›„í›ˆí›Œí›™í›¤í›¼íœ˜íœ´íœ¼í‰í‘í”í˜í í¡í¥í¬ížˆíž";
 	public final static String ALPABET_UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	public final static String ALPABET_LOWER = "abcdefghijklmnopqrstuvwxyz";
 	public final static String ALPABET = ALPABET_UPPER + ALPABET_LOWER;
@@ -16,7 +18,7 @@ public class RandomDataUtil {
 	public final static String ALPABET_NUMRIC = ALPABET + NUMRIC;
 	
 	/**
-	 * À¯´ÏÄÚµå ³» ·£´ý ÇÑ±Û °¡Á®¿À±â
+	 * ìœ ë‹ˆì½”ë“œ ë‚´ ëžœë¤ í•œê¸€ ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -37,7 +39,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * ÀÎ¸í¿ëÇÑÀÚ Áß ·£´ýÇÑ±ÛÀÚ °¡Á®¿À±â
+	 * ì¸ëª…ìš©í•œìž ì¤‘ ëžœë¤í•œê¸€ìž ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -47,7 +49,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * ±¹³» ¼º¾¾ ¸ñ·Ï Áß ·£´ýÇÑ ¼º °¡Á®¿À±â
+	 * êµ­ë‚´ ì„±ì”¨ ëª©ë¡ ì¤‘ ëžœë¤í•œ ì„± ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -57,7 +59,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * ·£´ýÇÑ ¼ýÀÚ °¡Á®¿À±â
+	 * ëžœë¤í•œ ìˆ«ìž ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -67,7 +69,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * ·£´ýÇÑ ´ë¹®ÀÚ ¾ËÆÄºª °¡Á®¿À±â 
+	 * ëžœë¤í•œ ëŒ€ë¬¸ìž ì•ŒíŒŒë²³ ê°€ì ¸ì˜¤ê¸° 
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -77,7 +79,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * ·£´ýÇÑ ¼Ò¹®ÀÚ ¾ËÆÄºª °¡Á®¿À±â
+	 * ëžœë¤í•œ ì†Œë¬¸ìž ì•ŒíŒŒë²³ ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -87,7 +89,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * ·£´ýÇÑ ´ë¼Ò¹®ÀÚ ¾ËÆÄºª °¡Á®¿À±â
+	 * ëžœë¤í•œ ëŒ€ì†Œë¬¸ìž ì•ŒíŒŒë²³ ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -97,7 +99,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * ·£´ýÇÑ ´ë¼Ò¹®ÀÚ ¾ËÆÄºª¿Í ¼ýÀÚ °¡Á®¿À±â
+	 * ëžœë¤í•œ ëŒ€ì†Œë¬¸ìž ì•ŒíŒŒë²³ì™€ ìˆ«ìž ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -107,7 +109,7 @@ public class RandomDataUtil {
 	}
 
 	/**
-	 * ·£´ýÇÑ CI½º·¯¿î °ª °¡Á®¿À±â
+	 * ëžœë¤í•œ CIìŠ¤ëŸ¬ìš´ ê°’ ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -118,7 +120,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * ·£´ýÇÑ ÈÞ´ëÆù °ª °¡Á®¿À±â
+	 * ëžœë¤í•œ íœ´ëŒ€í° ê°’ ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -128,7 +130,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * ·£´ýÇÑ ÀÌ¸ÞÀÏ °ª °¡Á®¿À±â
+	 * ëžœë¤í•œ ì´ë©”ì¼ ê°’ ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception
@@ -138,7 +140,7 @@ public class RandomDataUtil {
 	}
 	
 	/**
-	 * °¡¿ë ÀÎµ¦½º ³»¿¡¼­ ·£´ýÇÑ °ª °¡Á®¿À±â
+	 * ê°€ìš© ì¸ë±ìŠ¤ ë‚´ì—ì„œ ëžœë¤í•œ ê°’ ê°€ì ¸ì˜¤ê¸°
 	 * @param size
 	 * @return
 	 * @throws Exception

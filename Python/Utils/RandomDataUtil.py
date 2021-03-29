@@ -34,12 +34,12 @@ def randomCi():
     srting_pool = string.ascii_letters + string.digits + "^_=+\\/"
     return ''.join(choice(srting_pool) for _ in range(88))
 
-def randomNumber(size : int):
+def randomNumric(size : int):
     string_pool = string.digits
     return ''.join(choice(string_pool) for _ in range(size))
 
 def randomCarNo():
-    return randomFromUnicode(2) + randomNumber(2) + randomFromUnicode(1) + randomNumber(4)
+    return randomFromUnicode(2) + randomNumric(2) + randomFromUnicode(1) + randomNumric(4)
 
 if __name__ == "__main__":
     print(randomFromUnicode(3))

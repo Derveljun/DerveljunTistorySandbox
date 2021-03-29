@@ -1,9 +1,12 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Random;
 
 public class RandomDataUtil {
 	
 	private final static Random random = new Random();
-	
+	private final static Calendar cal = Calendar.getInstance();
 	public final static String ALL_KOREAN_LAST_NAME = "김이박최정강조윤장임한오서신권황안송류전홍고문양손배백허유남심지노하곽성차주우구라민진엄채원천방공현함변염여추도소석선설마길연위표명기반왕금옥육인맹제모탁국어은편용예경봉사부가복태목형계피두감음빈동온호범좌팽승간상시갈단견당화창";
 	public final static String ALL_KOREAN_NAMABLE_KOR = "가각간갈감갑강개객갱갹거건걸검겁게격견결겸경계고곡곤골공곶과곽관괄광괘괴괵굉교구국군굴궁권궐궤귀규균귤극근글금급긍기긴길김끽나낙난날남납낭내녀녁년념녑녕노농뇌뇨누눈눌뉴뉵능니닉닐다단달담답당대댁덕도독돈돌동두둔둘득등라락란랄람랍랑래랭"
             +"략량려력련렬렴렵령례로록론롱뢰료룡루류륙륜률륭륵름릉리린림립마막만말망매맥맹멱면멸명몌모목몰몽묘무묵문물미민밀박반발방배백번벌범법벽변별병보복본볼봉부북분불붕비빈빙사삭산살삼삽상새색생서석선설섬섭성세소속손솔송쇄쇠수숙순술숭쉬슬습승시"
@@ -174,7 +177,7 @@ public class RandomDataUtil {
 	 * @throws Exception
 	 */
 	public static String randomCellPhone() throws Exception {
-		return "010" + randomNumber(8);
+		return "010" + randomNumric(8);
 	}
 	
 	/**
@@ -194,6 +197,26 @@ public class RandomDataUtil {
 	 */
 	public static String randomCarNo() throws Exception {
 		return randomKoreanUnicode(2) + randomNumric(2) + randomKoreanUnicode(2) + randomNumric(4);
+	}
+	
+	/**
+	 * 랜덤한 생년월일 가져오기
+	 * @param startYear
+	 * @param endYear
+	 * @return
+	 * @throws Exception
+	 */
+	public static String randomBirthday(int startYear, int endYear) throws Exception {
+		
+		if (startYear > endYear) {
+			throw new Exception();
+		}
+		
+		int randYear = startYear + randomNumber(endYear - startYear);
+		int randMonth = randomNumber(12);
+		
+		return LocalDate.of(randYear, randMonth, cal.getActualMaximum(Calendar.DAY_OF_MONTH))
+				.format(DateTimeFormatter.BASIC_ISO_DATE);
 	}
 	
 	/**
@@ -227,6 +250,8 @@ public class RandomDataUtil {
 		System.out.println(randomCellPhone());
 		System.out.println(randomCi());
 		System.out.println(randomEmail());
+		System.out.println(randomBirthday(2000, 2014));
 	}
+
 
 }

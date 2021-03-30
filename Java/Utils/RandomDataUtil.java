@@ -214,6 +214,8 @@ public class RandomDataUtil {
 		
 		int randYear = startYear + randomNumber(endYear - startYear);
 		int randMonth = randomNumber(12) + 1;
+		cal.set(randYear, randMonth, 1);
+		
 		int randDate = randomNumber(cal.getActualMaximum(Calendar.DAY_OF_MONTH));
 		return LocalDate.of(randYear, randMonth, randDate == 0 ? 1 : randDate)
 						.format(DateTimeFormatter.BASIC_ISO_DATE);
